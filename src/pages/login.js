@@ -4,9 +4,9 @@ import SEO from "../components/shared/Seo";
 import {
   Card,
   CardHeader,
-  Button,
-  Typography,
   TextField,
+  Button,
+  Typography
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import FacebookIconBlue from "../images/facebook-icon-blue.svg";
@@ -25,7 +25,7 @@ function LoginPage() {
             <form>
               <TextField
                 fullWidth
-                vatiant="filled"
+                variant="filled"
                 label="Username"
                 margin="dense"
                 className={classes.textField}
@@ -33,12 +33,12 @@ function LoginPage() {
               />
               <TextField
                 fullWidth
-                vatiant="filled"
+                variant="filled"
                 label="Password"
-                type="password"
                 margin="dense"
                 className={classes.textField}
                 autoComplete="current-password"
+                type="password"
               />
               <Button
                 variant="contained"
@@ -47,7 +47,7 @@ function LoginPage() {
                 className={classes.button}
                 type="submit"
               >
-                Log in{" "}
+                Log In
               </Button>
             </form>
             <div className={classes.orContainer}>
@@ -59,14 +59,14 @@ function LoginPage() {
               </div>
               <div className={classes.orLine} />
             </div>
-            <LoginWithFacebook color="secodary" iconColor="blue" />
+            <LoginWithFacebook color="secondary" iconColor="blue" />
             <Button fullWidth color="secondary">
-              <Typography variant="caption">Forgot password ?</Typography>
+              <Typography variant="caption">Forgot password?</Typography>
             </Button>
           </Card>
           <Card className={classes.signUpCard}>
             <Typography align="right" variant="body2">
-              Don't have account?
+              Don't have an account?
             </Typography>
             <Link to="/accounts/emailsignup">
               <Button color="primary" className={classes.signUpButton}>
@@ -82,17 +82,17 @@ function LoginPage() {
 
 export function LoginWithFacebook({ color, iconColor, variant }) {
   const classes = useLoginPageStyles();
-  const FacebookIcon =
+  const facebookIcon =
     iconColor === "blue" ? FacebookIconBlue : FacebookIconWhite;
 
   return (
     <Button fullWidth color={color} variant={variant}>
       <img
-        src={FacebookIcon}
-        alt="facebool icon"
+        src={facebookIcon}
+        alt="facebook icon"
         className={classes.facebookIcon}
       />
-      Log In With Facebook
+      Log In with Facebook
     </Button>
   );
 }
